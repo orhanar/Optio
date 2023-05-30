@@ -31,11 +31,34 @@ namespace Optio
 
         int firstNumber, lastNumber = 0;
         int divisibleTerm = 1;
+        string divisibleNumber = "";
+        int controlNumber = 0;
         private void btnCount_Click(object sender, EventArgs e)
         {
+            if(txtStartFrom.Text.Trim()=="" || txtTo.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter a number");
+            }
+            else
+            {
+            txtDivisibleNumbers.Text = String.Empty;
+            divisibleNumber = String.Empty;
             firstNumber = Convert.ToInt32(txtStartFrom.Text);
             lastNumber = Convert.ToInt32(txtTo.Text);
-            MessageBox.Show("Divisible Term" + divisibleTerm + "From " + firstNumber + " To " + lastNumber);
+            for (int i = firstNumber; i < lastNumber; i++)
+            {
+                if (i % divisibleTerm == 0)
+                {
+                    divisibleNumber += i.ToString() + " ";
+                    if (controlNumber % 10 == 0)
+                    {
+                        divisibleNumber += Environment.NewLine;
+                    }
+                    controlNumber++;
+                }
+            }
+            txtDivisibleNumbers.Text = divisibleNumber;
+            }
 
         }
 
@@ -52,6 +75,11 @@ namespace Optio
         private void cmbDivisibleTerm_SelectedIndexChanged(object sender, EventArgs e)
         {
             divisibleTerm = Convert.ToInt32(cmbDivisibleTerm.SelectedItem);
+
+        }
+
+        private void txtDivisibleNumbers_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
