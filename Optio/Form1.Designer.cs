@@ -34,6 +34,8 @@
             txtTo = new TextBox();
             btnCount = new Button();
             btnExit = new Button();
+            divNum = new Label();
+            cmbDivisibleTerm = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -63,7 +65,7 @@
             // 
             txtStartFrom.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtStartFrom.Location = new Point(230, 117);
-            txtStartFrom.Margin = new Padding(6, 6, 6, 6);
+            txtStartFrom.Margin = new Padding(6);
             txtStartFrom.Name = "txtStartFrom";
             txtStartFrom.Size = new Size(182, 50);
             txtStartFrom.TabIndex = 2;
@@ -73,7 +75,7 @@
             // 
             txtTo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtTo.Location = new Point(490, 117);
-            txtTo.Margin = new Padding(6, 6, 6, 6);
+            txtTo.Margin = new Padding(6);
             txtTo.Name = "txtTo";
             txtTo.Size = new Size(182, 50);
             txtTo.TabIndex = 3;
@@ -81,8 +83,8 @@
             // btnCount
             // 
             btnCount.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCount.Location = new Point(249, 215);
-            btnCount.Margin = new Padding(6, 6, 6, 6);
+            btnCount.Location = new Point(249, 279);
+            btnCount.Margin = new Padding(6);
             btnCount.Name = "btnCount";
             btnCount.Size = new Size(163, 68);
             btnCount.TabIndex = 4;
@@ -93,8 +95,8 @@
             // btnExit
             // 
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExit.Location = new Point(490, 215);
-            btnExit.Margin = new Padding(6, 6, 6, 6);
+            btnExit.Location = new Point(490, 279);
+            btnExit.Margin = new Padding(6);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(163, 68);
             btnExit.TabIndex = 5;
@@ -102,18 +104,42 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // divNum
+            // 
+            divNum.AutoSize = true;
+            divNum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            divNum.Location = new Point(57, 190);
+            divNum.Margin = new Padding(6, 0, 6, 0);
+            divNum.Name = "divNum";
+            divNum.Size = new Size(280, 45);
+            divNum.TabIndex = 6;
+            divNum.Text = "Divisible Number";
+            divNum.Click += label3_Click;
+            // 
+            // cmbDivisibleTerm
+            // 
+            cmbDivisibleTerm.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbDivisibleTerm.FormattingEnabled = true;
+            cmbDivisibleTerm.Location = new Point(346, 187);
+            cmbDivisibleTerm.Name = "cmbDivisibleTerm";
+            cmbDivisibleTerm.Size = new Size(242, 53);
+            cmbDivisibleTerm.TabIndex = 7;
+            cmbDivisibleTerm.SelectedIndexChanged += cmbDivisibleTerm_SelectedIndexChanged;
+            // 
             // Count
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1372, 960);
+            Controls.Add(cmbDivisibleTerm);
+            Controls.Add(divNum);
             Controls.Add(btnExit);
             Controls.Add(btnCount);
             Controls.Add(txtTo);
             Controls.Add(txtStartFrom);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "Count";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Count";
@@ -130,5 +156,7 @@
         private TextBox txtTo;
         private Button btnCount;
         private Button btnExit;
+        private Label divNum;
+        private ComboBox cmbDivisibleTerm;
     }
 }
