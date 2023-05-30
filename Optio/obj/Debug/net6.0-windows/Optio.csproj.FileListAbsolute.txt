@@ -1,0 +1,17 @@
+C:\Users\orhan\source\repos\Optio\Optio\bin\Debug\net6.0-windows\Optio.exe
+C:\Users\orhan\source\repos\Optio\Optio\bin\Debug\net6.0-windows\Optio.deps.json
+C:\Users\orhan\source\repos\Optio\Optio\bin\Debug\net6.0-windows\Optio.runtimeconfig.json
+C:\Users\orhan\source\repos\Optio\Optio\bin\Debug\net6.0-windows\Optio.dll
+C:\Users\orhan\source\repos\Optio\Optio\bin\Debug\net6.0-windows\Optio.pdb
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.csproj.AssemblyReference.cache
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.Count.resources
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.csproj.GenerateResource.cache
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.AssemblyInfoInputs.cache
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.AssemblyInfo.cs
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.csproj.CoreCompileInputs.cache
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.dll
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\refint\Optio.dll
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.pdb
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\Optio.genruntimeconfig.cache
+C:\Users\orhan\source\repos\Optio\Optio\obj\Debug\net6.0-windows\ref\Optio.dll
