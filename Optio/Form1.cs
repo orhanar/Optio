@@ -35,29 +35,33 @@ namespace Optio
         int controlNumber = 0;
         private void btnCount_Click(object sender, EventArgs e)
         {
-            if(txtStartFrom.Text.Trim()=="" || txtTo.Text.Trim() == "")
+            if (txtStartFrom.Text.Trim() == "" || txtTo.Text.Trim() == "")
             {
                 MessageBox.Show("Please enter a number");
             }
+            else if (cmbDivisibleTerm.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select divisible term");
+            }
             else
             {
-            txtDivisibleNumbers.Text = String.Empty;
-            divisibleNumber = String.Empty;
-            firstNumber = Convert.ToInt32(txtStartFrom.Text);
-            lastNumber = Convert.ToInt32(txtTo.Text);
-            for (int i = firstNumber; i < lastNumber; i++)
-            {
-                if (i % divisibleTerm == 0)
+                txtDivisibleNumbers.Text = String.Empty;
+                divisibleNumber = String.Empty;
+                firstNumber = Convert.ToInt32(txtStartFrom.Text);
+                lastNumber = Convert.ToInt32(txtTo.Text);
+                for (int i = firstNumber; i < lastNumber; i++)
                 {
-                    divisibleNumber += i.ToString() + " ";
-                    if (controlNumber % 10 == 0)
+                    if (i % divisibleTerm == 0)
                     {
-                        divisibleNumber += Environment.NewLine;
+                        divisibleNumber += i.ToString() + " ";
+                        if (controlNumber % 10 == 0)
+                        {
+                            divisibleNumber += Environment.NewLine;
+                        }
+                        controlNumber++;
                     }
-                    controlNumber++;
                 }
-            }
-            txtDivisibleNumbers.Text = divisibleNumber;
+                txtDivisibleNumbers.Text = divisibleNumber;
             }
 
         }
@@ -81,6 +85,66 @@ namespace Optio
         private void txtDivisibleNumbers_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtStartFrom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void rbBlack_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbBlack.Checked)
+            {
+                rbRed.Checked = false;
+                rbGreen.Checked = false;
+                rbBlue.Checked = false;
+                txtDivisibleNumbers.ForeColor = Color.Black;
+            }
+        }
+
+        private void rbRed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbRed.Checked)
+            {
+                rbBlack.Checked = false;
+                rbGreen.Checked = false;
+                rbBlue.Checked = false;
+                txtDivisibleNumbers.ForeColor = Color.Red;
+            }
+        }
+
+        private void rbBlue_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbBlue.Checked)
+            {
+                rbRed.Checked = false;
+                rbGreen.Checked = false;
+                rbBlack.Checked = false;
+                txtDivisibleNumbers.ForeColor = Color.Blue;
+            }
+        }
+
+        private void rbGreen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbGreen.Checked)
+            {
+                rbRed.Checked = false;
+                rbBlack.Checked = false;
+                rbBlue.Checked = false;
+                txtDivisibleNumbers.ForeColor = Color.Green;
+            }
         }
     }
 }
