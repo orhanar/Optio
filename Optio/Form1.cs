@@ -146,5 +146,31 @@ namespace Optio
                 txtDivisibleNumbers.ForeColor = Color.Green;
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chBold.Checked)
+            {
+                txtDivisibleNumbers.Font = new(txtDivisibleNumbers.Font.FontFamily, txtDivisibleNumbers.Font.Size, FontStyle.Bold);
+
+            }
+            else
+            {
+                txtDivisibleNumbers.Font = new(txtDivisibleNumbers.Font.FontFamily, txtDivisibleNumbers.Font.Size, FontStyle.Regular);
+            }
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (chItalic.Checked)
+            {
+                txtDivisibleNumbers.Font = new(txtDivisibleNumbers.Font.FontFamily, txtDivisibleNumbers.Font.Size, FontStyle.Italic);
+
+            }
+            else
+            {
+                txtDivisibleNumbers.Font = new(txtDivisibleNumbers.Font.FontFamily, txtDivisibleNumbers.Font.Size, FontStyle.Regular);
+            }
+        }
     }
 }

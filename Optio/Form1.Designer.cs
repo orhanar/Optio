@@ -42,6 +42,8 @@
             rbBlue = new RadioButton();
             rbRed = new RadioButton();
             rbBlack = new RadioButton();
+            chBold = new CheckBox();
+            chItalic = new CheckBox();
             Groupbox.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,10 +51,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(54, 122);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(29, 57);
             label1.Name = "label1";
-            label1.Size = new Size(180, 45);
+            label1.Size = new Size(89, 21);
             label1.TabIndex = 0;
             label1.Text = "Start From";
             label1.Click += label1_Click;
@@ -61,20 +62,18 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(427, 122);
-            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Location = new Point(230, 57);
             label2.Name = "label2";
-            label2.Size = new Size(56, 45);
+            label2.Size = new Size(28, 21);
             label2.TabIndex = 1;
             label2.Text = "To";
             // 
             // txtStartFrom
             // 
             txtStartFrom.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtStartFrom.Location = new Point(230, 117);
-            txtStartFrom.Margin = new Padding(6);
+            txtStartFrom.Location = new Point(124, 55);
             txtStartFrom.Name = "txtStartFrom";
-            txtStartFrom.Size = new Size(182, 50);
+            txtStartFrom.Size = new Size(100, 29);
             txtStartFrom.TabIndex = 2;
             txtStartFrom.TextChanged += textBox1_TextChanged;
             txtStartFrom.KeyPress += txtStartFrom_KeyPress;
@@ -82,20 +81,18 @@
             // txtTo
             // 
             txtTo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTo.Location = new Point(490, 117);
-            txtTo.Margin = new Padding(6);
+            txtTo.Location = new Point(264, 55);
             txtTo.Name = "txtTo";
-            txtTo.Size = new Size(182, 50);
+            txtTo.Size = new Size(100, 29);
             txtTo.TabIndex = 3;
             txtTo.KeyPress += txtTo_KeyPress;
             // 
             // btnCount
             // 
             btnCount.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCount.Location = new Point(249, 279);
-            btnCount.Margin = new Padding(6);
+            btnCount.Location = new Point(134, 131);
             btnCount.Name = "btnCount";
-            btnCount.Size = new Size(163, 68);
+            btnCount.Size = new Size(88, 32);
             btnCount.TabIndex = 4;
             btnCount.Text = "Count";
             btnCount.UseVisualStyleBackColor = true;
@@ -104,10 +101,9 @@
             // btnExit
             // 
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExit.Location = new Point(490, 279);
-            btnExit.Margin = new Padding(6);
+            btnExit.Location = new Point(264, 131);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(163, 68);
+            btnExit.Size = new Size(88, 32);
             btnExit.TabIndex = 5;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
@@ -117,10 +113,9 @@
             // 
             divNum.AutoSize = true;
             divNum.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            divNum.Location = new Point(58, 190);
-            divNum.Margin = new Padding(6, 0, 6, 0);
+            divNum.Location = new Point(31, 89);
             divNum.Name = "divNum";
-            divNum.Size = new Size(280, 45);
+            divNum.Size = new Size(144, 21);
             divNum.TabIndex = 6;
             divNum.Text = "Divisible Number";
             divNum.Click += label3_Click;
@@ -129,21 +124,21 @@
             // 
             cmbDivisibleTerm.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cmbDivisibleTerm.FormattingEnabled = true;
-            cmbDivisibleTerm.Location = new Point(345, 188);
-            cmbDivisibleTerm.Margin = new Padding(4, 2, 4, 2);
+            cmbDivisibleTerm.Location = new Point(186, 88);
+            cmbDivisibleTerm.Margin = new Padding(2, 1, 2, 1);
             cmbDivisibleTerm.Name = "cmbDivisibleTerm";
-            cmbDivisibleTerm.Size = new Size(242, 53);
+            cmbDivisibleTerm.Size = new Size(132, 29);
             cmbDivisibleTerm.TabIndex = 7;
             cmbDivisibleTerm.SelectedIndexChanged += cmbDivisibleTerm_SelectedIndexChanged;
             // 
             // txtDivisibleNumbers
             // 
             txtDivisibleNumbers.Dock = DockStyle.Bottom;
-            txtDivisibleNumbers.Location = new Point(0, 401);
-            txtDivisibleNumbers.Margin = new Padding(4, 2, 4, 2);
+            txtDivisibleNumbers.Location = new Point(0, 186);
+            txtDivisibleNumbers.Margin = new Padding(2, 1, 2, 1);
             txtDivisibleNumbers.Multiline = true;
             txtDivisibleNumbers.Name = "txtDivisibleNumbers";
-            txtDivisibleNumbers.Size = new Size(1372, 493);
+            txtDivisibleNumbers.Size = new Size(739, 233);
             txtDivisibleNumbers.TabIndex = 8;
             txtDivisibleNumbers.TextChanged += txtDivisibleNumbers_TextChanged;
             // 
@@ -154,9 +149,11 @@
             Groupbox.Controls.Add(rbRed);
             Groupbox.Controls.Add(rbBlack);
             Groupbox.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            Groupbox.Location = new Point(749, 63);
+            Groupbox.Location = new Point(403, 30);
+            Groupbox.Margin = new Padding(2, 1, 2, 1);
             Groupbox.Name = "Groupbox";
-            Groupbox.Size = new Size(560, 299);
+            Groupbox.Padding = new Padding(2, 1, 2, 1);
+            Groupbox.Size = new Size(302, 140);
             Groupbox.TabIndex = 10;
             Groupbox.TabStop = false;
             Groupbox.Text = "Select Color";
@@ -164,9 +161,10 @@
             // rbGreen
             // 
             rbGreen.AutoSize = true;
-            rbGreen.Location = new Point(51, 223);
+            rbGreen.Location = new Point(27, 105);
+            rbGreen.Margin = new Padding(2, 1, 2, 1);
             rbGreen.Name = "rbGreen";
-            rbGreen.Size = new Size(124, 41);
+            rbGreen.Size = new Size(67, 23);
             rbGreen.TabIndex = 3;
             rbGreen.Text = "Green";
             rbGreen.UseVisualStyleBackColor = true;
@@ -175,9 +173,10 @@
             // rbBlue
             // 
             rbBlue.AutoSize = true;
-            rbBlue.Location = new Point(54, 174);
+            rbBlue.Location = new Point(29, 82);
+            rbBlue.Margin = new Padding(2, 1, 2, 1);
             rbBlue.Name = "rbBlue";
-            rbBlue.Size = new Size(104, 41);
+            rbBlue.Size = new Size(56, 23);
             rbBlue.TabIndex = 2;
             rbBlue.Text = "Blue";
             rbBlue.UseVisualStyleBackColor = true;
@@ -186,9 +185,10 @@
             // rbRed
             // 
             rbRed.AutoSize = true;
-            rbRed.Location = new Point(53, 125);
+            rbRed.Location = new Point(29, 59);
+            rbRed.Margin = new Padding(2, 1, 2, 1);
             rbRed.Name = "rbRed";
-            rbRed.Size = new Size(97, 41);
+            rbRed.Size = new Size(53, 23);
             rbRed.TabIndex = 1;
             rbRed.Text = "Red";
             rbRed.UseVisualStyleBackColor = true;
@@ -198,20 +198,47 @@
             // 
             rbBlack.AutoSize = true;
             rbBlack.Checked = true;
-            rbBlack.Location = new Point(53, 74);
+            rbBlack.Location = new Point(29, 35);
+            rbBlack.Margin = new Padding(2, 1, 2, 1);
             rbBlack.Name = "rbBlack";
-            rbBlack.Size = new Size(116, 41);
+            rbBlack.Size = new Size(63, 23);
             rbBlack.TabIndex = 0;
             rbBlack.TabStop = true;
             rbBlack.Text = "Black";
             rbBlack.UseVisualStyleBackColor = true;
             rbBlack.CheckedChanged += rbBlack_CheckedChanged;
             // 
+            // chBold
+            // 
+            chBold.AutoSize = true;
+            chBold.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            chBold.Location = new Point(28, 130);
+            chBold.Name = "chBold";
+            chBold.Size = new Size(55, 21);
+            chBold.TabIndex = 11;
+            chBold.Text = "Bold";
+            chBold.UseVisualStyleBackColor = true;
+            chBold.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // chItalic
+            // 
+            chItalic.AutoSize = true;
+            chItalic.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            chItalic.Location = new Point(29, 149);
+            chItalic.Name = "chItalic";
+            chItalic.Size = new Size(58, 21);
+            chItalic.TabIndex = 12;
+            chItalic.Text = "Italic";
+            chItalic.UseVisualStyleBackColor = true;
+            chItalic.CheckedChanged += checkBox1_CheckedChanged_1;
+            // 
             // Count
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1372, 894);
+            ClientSize = new Size(739, 419);
+            Controls.Add(chItalic);
+            Controls.Add(chBold);
             Controls.Add(Groupbox);
             Controls.Add(txtDivisibleNumbers);
             Controls.Add(cmbDivisibleTerm);
@@ -222,7 +249,6 @@
             Controls.Add(txtStartFrom);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(6);
             Name = "Count";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Count";
@@ -249,5 +275,7 @@
         private RadioButton rbBlue;
         private RadioButton rbRed;
         private RadioButton rbBlack;
+        private CheckBox chBold;
+        private CheckBox chItalic;
     }
 }
